@@ -1,81 +1,69 @@
-/* ======================================================= */
-/* 1. FONT & VARIABEL DASAR (ADN COFFEE BRANDING) */
-/* ======================================================= */
-
-/* Import Font dari Google Fonts (Playfair Display untuk nuansa tradisional/batik) */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 
 :root {
-    /* Warna diambil dari logo ADN Coffee */
-    --color-primary: #4A2E1F;   /* Cokelat Gelap (Navbar Background, Heading) */
-    --color-secondary: #F8F4E3; /* Krem Pucat (Warna Font Default) */
-    --color-accent: #C89F5F;    /* Emas/Kuning (Highlight, Mode Gelap Heading) */
-    --color-light-bg: #E6E0D4;  /* Background Hero Section */
+   
+    --color-primary: #4A2E1F;   
+    --color-secondary: #F8F4E3; 
+    --color-accent: #C89F5F;    
+    --color-light-bg: #E6E0D4;  
     --font-family-primary: 'Playfair Display', serif;
 }
 
-/* Terapkan Font ke seluruh body */
+
 body {
     font-family: var(--font-family-primary);
-    transition: background-color 0.3s, color 0.3s; /* Transisi untuk Mode Gelap */
+    transition: background-color 0.3s, color 0.3s; 
 }
 
-/* ======================================================= */
-/* 2. HEADER & NAVIGATION (NAVBAR) */
-/* ======================================================= */
 
 .navbar {
-    background-color: var(--color-primary); /* Cokelat Gelap */
+    background-color: var(--color-primary); 
     padding-top: 10px;
     padding-bottom: 10px;
 }
-/* Styling Logo */
+
 .navbar-brand img {
-    /* Logo sudah diset 55x55 di HTML, CSS ini opsional */
+    
     margin-right: 0; 
 }
-/* Styling Link Navigasi */
+
 .navbar-brand, .nav-link {
-    color: var(--color-secondary) !important; /* Krem Pucat */
+    color: var(--color-secondary) !important;
     font-weight: 700; 
 }
 .nav-link:hover {
-    color: var(--color-accent) !important; /* Emas saat hover */
+    color: var(--color-accent) !important;
 }
 .navbar-toggler {
     border-color: rgba(255, 255, 255, 0.5);
 }
 
-/* ----------------------------------- */
-/* Styling Tombol Mode (Icon Only) */
-/* ----------------------------------- */
+
 #darkModeToggle {
     border: none;
     background: none;
-    color: var(--color-secondary) !important; /* Warna Krem Icon default */
+    color: var(--color-secondary) !important;
     padding: 8px;
     font-size: 1.5rem;
     line-height: 1; 
 }
 
 
-/* ======================================================= */
-/* 3. KONTEN UTAMA (HEADINGS & TEKS) */
-/* ======================================================= */
 
-/* Heading Utama (Mengganti warna biru Bootstrap) */
+
+
 h1, h2, h3, h4, .display-3, .display-5 {
-    color: var(--color-primary) !important; /* Cokelat Gelap */
+    color: var(--color-primary) !important;
     font-weight: 700;
 }
 
-/* Teks Biasa (dibuat abu-abu gelap agar lebih lembut) */
+
 p, .lead {
     color: #333333;
     line-height: 1.6;
 }
 
-/* Tombol Dasar (Contoh: Baca Selengkapnya) */
+
 .btn-dark {
     background-color: var(--color-primary);
     border-color: var(--color-primary);
@@ -87,86 +75,78 @@ p, .lead {
     border-color: #6a4435;
 }
 
-/* Hero Section */
+
 #hero-section {
     background-color: var(--color-light-bg) !important;
 }
 
-/* mensejajarkan harga pada menu*/
+
 .card-body {
     display: flex;
-    flex-direction: column; /* Atur item berjejer vertikal */
-    justify-content: space-between; /* Dorong elemen ke atas dan bawah */
+    flex-direction: column;
+    justify-content: space-between;
 }
-/* Opsional: Tampilan kartu saat di hover */
+
 .menu-card:hover {
     transform: translateY(-5px);
     transition: transform 0.3s ease;
 }
 
-/* ----------------------------------- */
-/* Gambar Cerita Kami */
-/* ----------------------------------- */
+
 #cerita-kami img {
-    max-height: 400px; /* Batasi tinggi gambar di kolom kanan */
+    max-height: 400px; 
     object-fit: cover;
 }
-/* Fix Warna Biru di Card Title */
+
 .card-title { color: var(--color-primary) !important; font-weight: 700; }
 
-/* ----------------------------------- */
-/* Galeri (Foto Seragam 4, 3, 2 Kolom) */
-/* ----------------------------------- */
+
 #gallery img {
-    height: 250px; /* Tinggi seragam untuk tampilan rapi */
+    height: 250px; 
     width: 100%;
-    object-fit: cover; /* Pastikan gambar memenuhi kotak tanpa terdistorsi */
+    object-fit: cover; 
     transition: transform 0.3s;
 }
 #gallery img:hover {
     transform: scale(1.02);
 }
 
-/* ----------------------------------- */
-/* Kontak & Social Media */
-/* ----------------------------------- */
+
 #kontak a {
-    color: var(--color-primary) !important; /* Ikon sosial berwarna cokelat gelap */
+    color: var(--color-primary) !important;
     transition: color 0.3s;
 }
 #kontak a:hover {
-    color: var(--color-accent) !important; /* Warna Emas saat hover */
+    color: var(--color-accent) !important;
 }
 
-/* ======================================================= */
-/* 4. MODE GELAP (DARK MODE) */
-/* ======================================================= */
+
 
 body.dark-mode {
-    background-color: #1a1a1a; /* Background Hitam/Gelap */
-    color: #f8f8f8; /* Teks putih */
+    background-color: #1a1a1a; 
+    color: #f8f8f8;
 }
 
-/* Header di Mode Gelap */
+
 body.dark-mode .navbar {
     background-color: #000000;
 }
 body.dark-mode .nav-link, body.dark-mode #darkModeToggle {
-    color: var(--color-accent) !important; /* Link dan Icon Mode Gelap menjadi Emas */
+    color: var(--color-accent) !important; 
 }
 
-/* Konten di Mode Gelap */
+
 body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode .display-5 {
-    color: var(--color-accent) !important; /* Heading menjadi Emas */
+    color: var(--color-accent) !important; 
 }
 body.dark-mode p, body.dark-mode .lead {
-    color: #dddddd !important; /* Teks biasa menjadi putih keabuan */
+    color: #dddddd !important; 
 }
 body.dark-mode #hero-section {
     background-color: #333333 !important;
 }
 body.dark-mode .card {
-    background-color: #2a2a2a; /* Kartu menjadi abu-abu gelap */
+    background-color: #2a2a2a; 
     color: #f8f8f8;
 }
 body.dark-mode .btn-outline-dark {
@@ -174,14 +154,11 @@ body.dark-mode .btn-outline-dark {
     color: var(--color-accent) !important;
 }
 body.dark-mode #kontak a {
-    color: var(--color-accent) !important; /* Ikon sosial menjadi Emas */
+    color: var(--color-accent) !important; 
 }
 
-/* ======================================================= */
-/* 5. FITUR TAMBAHAN */
-/* ======================================================= */
 
-/* Tombol Kembali Ke Atas */
+
 #backToTopBtn {
     display: none;
     position: fixed;
@@ -205,14 +182,14 @@ body.dark-mode #kontak a {
 }
 
 
-/* Tambahkan ini ke style.css di bagian bawah */
+
 footer a:hover {
-    color: var(--color-accent) !important; /* Warna Emas saat hover di Footer */
+    color: var(--color-accent) !important;
 }
 
-/* Penyesuaian Footer di Dark Mode */
+
 body.dark-mode footer {
-    /* Footer tetap gelap agar kontras dengan body yang gelap atau terang */
+   
     background-color: #000000 !important;
 }
 body.dark-mode footer a {
@@ -222,18 +199,15 @@ body.dark-mode footer a:hover {
     color: var(--color-accent) !important; 
 }
 
-/* Tambahkan ini ke bagian akhir file style.css Anda */
 
-/* ----------------------------------- */
-/* Perbaikan Layout Card Visi & Misi */
-/* ----------------------------------- */
 .visi-misi-card .card-body {
     display: flex;
     flex-direction: column; 
     
-    /* Gunakan ini untuk memastikan konten menempel di bagian atas (start) */
+    
     justify-content: flex-start; 
     
-    /* Pastikan tidak ada margin tambahan yang mendorong konten ke bawah */
+   
     padding-bottom: 20px; 
+
 }
