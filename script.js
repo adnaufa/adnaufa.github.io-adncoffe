@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const subject = document.getElementById('validationCustom03').value.trim() || 'Pesan dari situs Adn Coffee';
         const message = document.getElementById('validationCustom04').value.trim();
 
-        const to = 'halo@adncoffee.com';
+        const to = 'adncoffe165@gmail.com';
         const body = `Nama: ${name}\nEmail: ${email}\n\n${message}`;
         const mailto = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
@@ -85,5 +85,6 @@ function topFunction() {
   document.body.scrollTop = 0; // Untuk Safari
   document.documentElement.scrollTop = 0; // Untuk Chrome, Firefox, IE dan Opera
 }
+
 
 document.getElementById('currentYear').textContent = new Date().getFullYear();
