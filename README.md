@@ -3,8 +3,8 @@
 
 > *Seduh Rasa, Tuang Cerita — Website profil kafe modern dengan katalog menu interaktif, galeri suasana, dan integrasi mock-up media sosial.*
 
-![Preview Adn Coffee](<img width="1208" height="4914" alt="adncoffe vercel app_ (1)" src="https://github.com/user-attachments/assets/9c270e8d-1b5d-40fb-928a-b446820cf708" />
-)
+<img width="1208" height="4914" alt="adncoffe vercel app_ (1)" src="https://github.com/user-attachments/assets/7eaeafe8-ee8b-4a65-a7b0-7e4ad53e70f1" />
+
 
 🌐 **Live Demo:** [https://adncoffe.vercel.app/](https://adncoffe.vercel.app/)
 
